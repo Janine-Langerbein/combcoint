@@ -5,8 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/jens-klenke/combcoint/workflows/R-CMD-check/badge.svg)](https://github.com/Janine-Langerbein/combcoint/actions)
-
+[![R-CMD-check](https://github.com/Janine-Langerbein/combcoint/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Janine-Langerbein/combcoint/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -47,7 +46,7 @@ The development version can be downloaded from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("jens-klenke/combcoint")
+devtools::install_github("Janine-Langerbein/combcoint")
 ```
 
 ## Usage
@@ -55,6 +54,7 @@ devtools::install_github("jens-klenke/combcoint")
 First install the package as described above
 
 ``` r
+
 # example data from the MTS package 
 data("mts-examples", package = "MTS")
 
