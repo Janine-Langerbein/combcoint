@@ -43,7 +43,7 @@ The development version can be downloaded from [GitHub](https://github.com/jens-
 
 ```{r eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("jens-klenke/combcoint")
+devtools::install_github("Janine-Langerbein/combcoint")
 ```
 
 ## Usage
