@@ -5,7 +5,8 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/jens-klenke/combcoint/workflows/R-CMD-check/badge.svg)](https://github.com/jens-klenke/combcoint/actions)
+[![R-CMD-check](https://github.com/jens-klenke/combcoint/workflows/R-CMD-check/badge.svg)](https://github.com/Janine-Langerbein/combcoint/actions)
+
 <!-- badges: end -->
 
 ## Overview
