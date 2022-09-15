@@ -62,7 +62,7 @@ get_p_value <- function(bh.test, trendtype, test.type, k, ...){
                        k_dummy = as.factor(k))
     colnames(new_data)[1] <- dep_var
     # approximation of the model
-    p.value_raw <- as.vector(model.matrix(object = model, data = new_data) %*% coef(model))
+    p.value_raw <- as.vector(stats::model.matrix(object = model, data = new_data) %*% coef(model))
 
     p.value_trans <- if(stringr::str_detect(dep_var, '_bc')){
       Re((lambda_p*as.complex(p.value_raw) + 1)^(1/lambda_p))

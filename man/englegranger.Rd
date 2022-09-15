@@ -36,13 +36,13 @@ Executes common cointegration tests, which serve as underlying tests for the Bay
 }
 \section{Functions}{
 \itemize{
-\item \code{banerjee}: Executes Banerjee Test.
+\item \code{banerjee()}: Executes Banerjee Test.
 
-\item \code{boswijk}: Executes Boswijk Test.
+\item \code{boswijk()}: Executes Boswijk Test.
 
-\item \code{johansen}: Executes Johansen Test.
+\item \code{johansen()}: Executes Johansen Test.
+
 }}
-
 \examples{
 # Luetkepohl (2007): Economic data from West Germany
 data(lutkepohl_e1)
