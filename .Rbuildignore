@@ -3,3 +3,5 @@
 ^\.github$
 ^notes$
 ^/notes$
+^LICENSE\.md$
+^README\.Rmd$

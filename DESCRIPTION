@@ -3,18 +3,17 @@ Title: A Joint Test-Statistic for the Null of Non-Cointegration
 Version: 0.0.0.9000
 Authors@R: c(
 	person("Janine", "Langerbein", email = "janine.langerbein@icloud.com", role = c("aut", "cre")),
-	person("Jens", "Klenke", email = "jens.klenke@vwl.uni-due.de", role = c("aut")))
+	person("Jens", "Klenke", email = "jens.klenke@vwl.uni-due.de", role = c("aut"),  comment = c(ORCID = "0000-0001-6292-3968")))
 Description: combcoint produces a joint test-statistic for the null of non-cointegration based on Engle-Granger, Johansen maximum eigenvalue, Boswijk and Banerjee tests. Also see Bayer, Christian and Christoph Hanck: "Combining Non-Cointegration tests", Journal of Time Series Analysis, 34(1), 83–95. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.1
-Imports: 
-    base,
+RoxygenNote: 7.3.2
+Imports:
     dplyr,
     Hmisc,
-    magrittr,
     MTS,
+    magrittr,
     purrr,
     stats,
     stringr,
@@ -28,5 +27,5 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
 Config/testthat/edition: 3
