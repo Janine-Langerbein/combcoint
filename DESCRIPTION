@@ -12,7 +12,6 @@ RoxygenNote: 7.3.2
 Imports:
     dplyr,
     Hmisc,
-    MTS,
     magrittr,
     purrr,
     stats,
@@ -22,6 +21,7 @@ Imports:
     tsDyn,
     urca
 Suggests: 
+    MTS,
     testthat (>= 3.0.0),
     knitr,
     rmarkdown
