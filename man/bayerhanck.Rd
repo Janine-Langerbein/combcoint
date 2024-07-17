@@ -45,6 +45,7 @@ bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1, lags = 4)
 
 # World Almanac and Book of Facts (1975): Monthly simple returns of the stocks of IBM,
 # Coca Cola and S&P Composite index
+library(MTS)
 data("mts-examples", package="MTS")
 bayerhanck(sp ~ ibm + ko, data = ibmspko)
 

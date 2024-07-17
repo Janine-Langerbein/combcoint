@@ -28,6 +28,7 @@ Imports:
     tsDyn,
     urca
 Suggests: 
+    MTS,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
