@@ -1,3 +1,5 @@
+# combcoint 0.2.0
+
 # combcoint 0.1.0
 
 ## First release to CRAN 

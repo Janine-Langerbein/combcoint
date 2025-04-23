@@ -1,6 +1,6 @@
 Package: combcoint
 Title: A Joint Test-Statistic for the Null of Non-Cointegration
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
     person("Janine", "Langerbein", , "janine.langerbein@icloud.com", role = c("aut", "cre", "cph")),
     person("Jens", "Klenke", , "jens.klenke@vwl.uni-due.de", role = "aut",
