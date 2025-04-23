@@ -42,7 +42,7 @@ install.packages("combcoint")
 -->
 
 The development version can be downloaded from
-[GitHub](https://github.com/jens-klenke/combcoint) with:
+[GitHub](https://github.com/Janine-Langerbein/combcoint) with:
 
 ``` r
 # install.packages("devtools")
@@ -95,5 +95,5 @@ Representation, Estimation, and Testing, *Econometrica* 55(2), 251-76.
 ------------------------------------------------------------------------
 
 Please note that this project and package is licensed under the
-[MIT](https://github.com/jens-klenke/combcoint/blob/master/LICENSE.md)
+[MIT](https://github.com/Janine-Langerbein/combcoint/blob/main/LICENSE.md)
 license.
