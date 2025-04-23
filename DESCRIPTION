@@ -2,7 +2,7 @@ Package: combcoint
 Title: A Joint Test-Statistic for the Null of Non-Cointegration
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Janine", "Langerbein", , "janine.langerbein@icloud.com", role = c("aut", "cre")),
+    person("Janine", "Langerbein", , "janine.langerbein@icloud.com", role = c("aut", "cre", "cph")),
     person("Jens", "Klenke", , "jens.klenke@vwl.uni-due.de", role = "aut",
            comment = c(ORCID = "0000-0001-6292-3968"))
   )

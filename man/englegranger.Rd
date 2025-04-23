@@ -48,11 +48,13 @@ Executes common cointegration tests, which serve as underlying tests for the Bay
 data(lutkepohl_e1)
 englegranger(linvestment ~ lincome + lconsumption, data = lutkepohl_e1)
 
+#' @examplesIf requireNamespace("MTS", quietly = TRUE)
 # World Almanac and Book of Facts (1975): Monthly simple returns of the stocks of IBM,
 # Coca Cola and S&P Composite index
-data("mts-examples", package="MTS")
-englegranger(sp ~ ibm + ko, data = ibmspko)
-
+try({
+  data("mts-examples", package = "MTS")
+  englegranger(sp ~ ibm + ko, data = ibmspko)
+}, silent = TRUE)
 
 
 }

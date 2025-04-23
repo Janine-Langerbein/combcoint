@@ -43,14 +43,17 @@ data(lutkepohl_e1)
 bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1)
 bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1, lags = 4)
 
+
+\dontshow{if (requireNamespace("MTS", quietly = TRUE)) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # World Almanac and Book of Facts (1975): Monthly simple returns of the stocks of IBM,
 # Coca Cola and S&P Composite index
-library(MTS)
-data("mts-examples", package="MTS")
-bayerhanck(sp ~ ibm + ko, data = ibmspko)
+try({
+  data("mts-examples", package = "MTS")
+  bayerhanck(sp ~ ibm + ko, data = ibmspko)
+}, silent = TRUE)
 
 
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 Bayer, C. and Hanck, C. (2013). Combining non-cointegration tests. \emph{Journal of Time Series Analysis}, 34(1), 83 -- 95. https://doi.org/10.1111/j.1467-9892.2012.00814.x

@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2021 Janine Langerbein and Jens Klenke
+Copyright (c) 2025 Janine Langerbein and Jens Klenke
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
