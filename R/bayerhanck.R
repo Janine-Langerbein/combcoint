@@ -155,6 +155,5 @@ bayerhanck <- function(formula, data, lags = 1, trend = "const", test = "all") {
               test.type = test,
               k = k)
   class(out) <- c("bhtest", "list")
-  print(out)
-  invisible(out)
+  return(out)
 }

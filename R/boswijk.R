@@ -99,5 +99,5 @@ boswijk <- function(formula, data, lags = 1, trend = "const"){
               var.cov = var_mat,
               test = "Boswijk",
               formula = formula)
-  invisible(out)
+  return(out)
 }

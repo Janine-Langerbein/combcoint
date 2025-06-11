@@ -73,5 +73,5 @@ englegranger <- function(formula, data, lags = 1, trend = "const"){
               trend = trend,
               test = "Engle-Granger",
               formula = formula)
-  invisible(out)
+  return(out)
 }

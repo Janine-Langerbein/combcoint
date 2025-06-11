@@ -45,5 +45,5 @@ johansen <- function(formula, data, type = "eigen", lags = 1, trend = "const"){
               eigen = jo_vec_sum[, c(1, 5:6)],
               test = "Johansen",
               formula = formula)
-  invisible(out)
+  return(out)
 }
