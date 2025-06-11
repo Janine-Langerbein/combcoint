@@ -1,14 +1,15 @@
 ---
-title: "combcoint"
+title: "Introduction to combcoint"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{combcoint_vignette}
+  %\VignetteIndexEntry{Introduction to combcoint}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  echo = TRUE,
   collapse = TRUE,
   comment = "#>"
 )
@@ -17,3 +18,9 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(combcoint)
 ```
+
+# Overview
+
+The `combcoint` package implements the Bayer-Hanck [(2013)](https://doi.org/10.1111/j.1467-9892.2012.00814.x) Combining non-cointegration tests. A statistical approach that enhances the reliability of cointegration detection by aggregating the p-values from multiple individual cointegration tests into a single joint test statistic. Specifically, it integrates the results from the Engle-Granger (EG), Johansen (JH), Boswijk (BO), and Banerjee-Dolado-Mestre (BDM) tests using a Fisher-type combination method. This approach increases the power and robustness of cointegration testing, particularly in cases where the results of individual tests are mixed or inconclusive.
+
+# 
