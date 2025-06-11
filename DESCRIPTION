@@ -6,7 +6,7 @@ Authors@R: c(
     person("Jens", "Klenke", , "jens.klenke@vwl.uni-due.de", role = "aut",
            comment = c(ORCID = "0000-0001-6292-3968"))
   )
-Description: Implements a joint cointegration testing approach that combines Engle-Granger, Johansen maximum eigenvalue, Boswijk, and Banerjee tests into a unified test-statistic for the null of non-cointegration. Also see Bayer, Christian and Hanck, Christoph (2013) ≤doi:10.1111/j.1467-9892.2012.00814.x>.
+Description: Implements a joint cointegration testing approach that combines Engle-Granger, Johansen maximum eigenvalue, Boswijk, and Banerjee tests into a unified test-statistic for the null of non-cointegration. Also see Bayer and Hanck (2013) <doi:10.1111/j.1467-9892.2012.00814.x>.
 License: MIT + file LICENSE
 BugReports: https://github.com/Janine-Langerbein/combcoint/issues
 Depends: 
