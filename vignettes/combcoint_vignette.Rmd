@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, include = FALSE}
 library(combcoint)
 ```
 
@@ -36,12 +36,12 @@ where $p_i$ are the $p$-values from the individual tests. Under the null hypothe
 
 # Installation
 You can install the package from CRAN:
-```{r}
+```{r, eval=FALSE}
 install.packages("combcoint")
 ```
 
 Or from GitHub
-```{r}
+```{r, eval=FALSE}
 remotes::install_github("Janine-Langerbein/combcoint")
 ```
 
@@ -66,7 +66,7 @@ Next, we apply the combined cointegration test on the same dataset:
 ```{r}
 bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1)
 ```
-By default, the function uses lags = 1. Optionally, the user can specify the lag length manually. For example, to apply the test with 4 lags:
+By default, the function uses the lags = 1. Optionally, the user can specify the lag length manually, e.g., with 4 lags:
 ```{r}
 bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1, lags = 4)
 ```
