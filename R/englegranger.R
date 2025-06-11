@@ -73,10 +73,5 @@ englegranger <- function(formula, data, lags = 1, trend = "const"){
               trend = trend,
               test = "Engle-Granger",
               formula = formula)
-  cat(c("----------------------------------------------------------",
-        "Engle-Granger Test",
-        "----------------------------------------------------------",
-        paste(c("Test statistic:", round(test.stat, 4)), collapse = " ")),
-        sep = "\n")
   invisible(out)
 }

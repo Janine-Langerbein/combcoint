@@ -45,10 +45,5 @@ johansen <- function(formula, data, type = "eigen", lags = 1, trend = "const"){
               eigen = jo_vec_sum[, c(1, 5:6)],
               test = "Johansen",
               formula = formula)
-  cat(c("----------------------------------------------------------",
-        "Johansen Test",
-        "----------------------------------------------------------",
-        paste(c("Value of test statistic:", round(test.stat, 4)), collapse = " ")),
-      sep = "\n")
   invisible(out)
 }
