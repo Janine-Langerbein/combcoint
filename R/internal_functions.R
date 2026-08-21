@@ -345,32 +345,9 @@ rank_test <- function(vecm, type = c("eigen", "trace"), r_null, cval = 0.05) {
 }
 
 
-## Doornik's five deterministic cases.
-## H_z  : no constant, no trend            (include = "none")
-## H_c  : restricted constant              (include = "none",  LRinclude = "const")
-## H_lc : unrestricted constant            (include = "const")
-## H_l  : unrestr. const + restr. trend    (include = "const", LRinclude = "trend")
-## H_ql : unrestricted constant and trend  (include = "both")
-Hnames <- c("H_z", "H_c", "H_lc", "H_l", "H_ql")
-
-## Table 7: asymptotic mean (6 rows) and variance (5 rows) of the TRACE stat.
-## Regressor order, mean: n^2, n, 1, 1{n==1}, 1{n==2}, sqrt(n)
-## Regressor order, var : n^2, n, 1, 1{n==1}, 1{n==2}
-tab7_mean <- matrix(NA_real_, nrow = 6, ncol = 5, dimnames = list(NULL, Hnames))
-tab7_var  <- matrix(NA_real_, nrow = 5, ncol = 5, dimnames = list(NULL, Hnames))
-
-## Table 8: asymptotic mean and variance of the MAX EIGENVALUE stat (5 rows).
-## Regressor order: n, 1, 1{n==1}, 1{n==2}, sqrt(n)
-tab8_mean <- matrix(NA_real_, nrow = 5, ncol = 5, dimnames = list(NULL, Hnames))
-tab8_var  <- matrix(NA_real_, nrow = 5, ncol = 5, dimnames = list(NULL, Hnames))
-
-## Table 9: small-sample correction, TRACE only (7 rows).
-## Regressor order: sqrt(n)/T, n/T, n^2/T^2, 1{n==1}/T, 1{n==1}, 1{n==2}, 1{n==3}
-tab9_mean <- matrix(NA_real_, nrow = 7, ncol = 5, dimnames = list(NULL, Hnames))
-tab9_var  <- matrix(NA_real_, nrow = 7, ncol = 5, dimnames = list(NULL, Hnames))
-
-
 #' Gamma-approximation p-value for one statistic
+#'
+#' approach and tables borrowed from tsDyn package
 #'
 #' @param x     the test statistic (UNCORRECTED, even when smallSamp = TRUE).
 #' @param n     n = K - r, the number of common trends under the null.
@@ -381,17 +358,14 @@ tab9_var  <- matrix(NA_real_, nrow = 7, ncol = 5, dimnames = list(NULL, Hnames))
 #' @noRd
 doornik_p <- function(x, n, case, type = c("trace", "eigen"),
                       T = NULL, smallSamp = FALSE) {
-
   type <- match.arg(type)
   case <- match.arg(case, Hnames)
   if (is.na(x)) return(NA_real_)
-
   if (type == "trace") {
     v_mean <- c(n^2, n, 1, as.numeric(n == 1), as.numeric(n == 2), sqrt(n))
     v_var  <- c(n^2, n, 1, as.numeric(n == 1), as.numeric(n == 2))
     mu <- drop(v_mean %*% tab7_mean[, case])
     v  <- drop(v_var  %*% tab7_var[, case])
-
     if (smallSamp) {
       if (is.null(T)) stop("'T' required when smallSamp = TRUE.")
       ## NOTE: the correction multiplies the MOMENTS, it does not rescale the
@@ -407,12 +381,10 @@ doornik_p <- function(x, n, case, type = c("trace", "eigen"),
     mu <- drop(v_eig %*% tab8_mean[, case])
     v  <- drop(v_eig %*% tab8_var[, case])
   }
-
   shape <- mu^2 / v
   rate  <- mu   / v
   stats::pgamma(x, shape = shape, rate = rate, lower.tail = FALSE)
 }
-
 
 #' Map a vecm_ml() specification onto Doornik's case labels
 #' @noRd
