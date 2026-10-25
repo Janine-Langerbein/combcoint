@@ -9,3 +9,5 @@
 ^Meta$
 ^cran-comments\.md$
 .urlignore
+^CRAN-SUBMISSION$
+^data-raw$
